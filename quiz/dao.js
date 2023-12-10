@@ -1,6 +1,6 @@
 import model from "./model.js";
 export const createQuiz = (quiz) => model.create(quiz);
-export const findQuizzesByCourseId = (courseId) => model.find({courseId});
+export const findQuizzesByCourseId = (courseId) => model.find({courseId}).sort({ availableFromDate: 1 });
 export const findAllQuizzes = () => model.find();
 export const findQuizById = (quizId) => model.findById(quizId);
 

@@ -2,14 +2,15 @@ import mongoose from "mongoose";
 const questionSchema = new mongoose.Schema({
     points: Number,
     index: Number,
+    title:String,
     content: String,
     quizId: String,
     instruction: String,
     //for t/f
     answerForTF: Boolean,
     //for MCQ
-    MCQchoice:[{ type: String }],
-    MCQcorrectAnswer:[{ type: String }],
+    MCQchoice:[{ text: String, isCorrect:Boolean }],
+    // MCQcorrectAnswer:[{ type: String }],
     //for fill in the blank
     answerForBlank:[{ type: String }],
 

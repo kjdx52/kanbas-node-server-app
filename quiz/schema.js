@@ -20,6 +20,7 @@ const quizSchema = new mongoose.Schema({
     isRequiredToViewQuizResults: Boolean,
     isWebcam: Boolean,
     isLockQuestionAfterAnswer: Boolean,
+    isPublish: Boolean,
     status: {
       type: String,
       enum: ["Open", "Closed", "Pending", "Not available"],
